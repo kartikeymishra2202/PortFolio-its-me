@@ -12,7 +12,9 @@ const MatterCloth = () => {
       Mouse = Matter.Mouse,
       Composite = Matter.Composite,
       Bodies = Matter.Bodies,
+      // eslint-disable-next-line no-unused-vars
       Body = Matter.Body,
+      // eslint-disable-next-line no-unused-vars
       Composites = Matter.Composites;
 
     // Create engine

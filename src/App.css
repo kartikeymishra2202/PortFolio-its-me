@@ -1,34 +1,37 @@
 /* Header Styles */
+/* Header Styles */
 .header {
+  position: relative;
+  height: 500px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  flex-wrap: wrap;
-  background-image: url("/public/image/full-back.jpg");
-  background-size: cover;
-  height: 500px;
-  background-position: center;
-  background-repeat: no-repeat;
-  /* background-image: url("/public/image/back.jpg");
-  background-size: cover; 
-  background-position: center; 
-  background-repeat: no-repeat;  */
-  /* background: linear-gradient(
-    to right,
-    rgba(1, 0, 3, 0.959),
-    rgba(0, 2, 2, 0.5)
-  ); */
+  background: url("/public/videos/background.mp4") no-repeat center center/cover; /* Fallback image */
+  overflow: hidden;
 }
-/* .full { */
-/* background-image: url("/public/image/full-back.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat; */
-/* } */
+
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.background-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: url("/public/videos/background.mp4") no-repeat center center/cover; /* Fallback image */
+}
+
 .intro {
   flex: 1;
   color: #fcfcfd;
+  z-index: 1;
 }
 
 .intro h1 {
@@ -48,49 +51,32 @@
   padding: 10px;
   display: inline-block;
   border-radius: 15px;
-  div {
-    transform: scale(0.75) rotateY(-30deg) rotateX(45deg) translateZ(4.5rem);
-    transform-origin: 50% 100%;
-    transform-style: preserve-3d;
-    box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.25);
-    transition: 0.6s ease transform;
+}
 
+.photo div {
+  transform: scale(0.75) rotateY(-30deg) rotateX(45deg) translateZ(4.5rem);
+  transform-origin: 50% 100%;
+  transform-style: preserve-3d;
+  box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.25);
+  transition: 0.6s ease transform;
+
+  &:hover {
+    transform: scale(1);
+  }
+
+  &::before {
+    transform: translateZ(4rem);
     &:hover {
-      transform: scale(1);
-    }
-
-    &::before {
-      transform: translateZ(4rem);
-      &:hover {
-        transform: translateZ(0);
-      }
-    }
-
-    &::after {
-      transform: translateZ(-4rem);
-      &:hover {
-        transform: translateZ(-1px);
-      }
+      transform: translateZ(0);
     }
   }
-}
-/* .photo { */
-/* border: 1px solid #200350;
-  padding: 10px;
-  display: inline-block;
-  border-radius: 15px;
-  box-shadow: 0 4px 8px rgba(113, 5, 236, 0.2);
-  background: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 0.5),
-    rgba(0, 0, 0, 0.5)
-  ); Inner border background */
-/* } */
 
-.photo img {
-  display: block;
-  border: 1px solid #050231; /* Inner border color and thickness */
-  border-radius: 10px; /* Inner border rounded corners */
+  &::after {
+    transform: translateZ(-4rem);
+    &:hover {
+      transform: translateZ(-1px);
+    }
+  }
 }
 
 .photo img {
@@ -118,32 +104,53 @@
   }
 }
 
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .photo {
+    width: 150px;
+    height: 250px;
+  }
+}
+
 /* Projects Styles */
+/* Projects Section Styles */
 .projects {
+  position: relative;
   padding: 20px;
   text-align: center;
-  /* background: linear-gradient(
-    to right,
-    rgba(214, 214, 216, 0.5),
-    rgba(107, 97, 167, 0.5),
-    rgba(17, 2, 117, 0.5)
-  ); */
-  /* background-image: url("/public/image/project-back.jpeg");
-  background-size: cover; /* Ensures the image covers the entire element */
-  /* background-position: center;
-  background-repeat: no-repeat;  */
-  background-image: url("/public/image/project-img.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  overflow: hidden; /* Ensures no overflow from video */
+}
+
+.background-video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Ensures the video is behind the content */
+  overflow: hidden;
+}
+
+.background-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: url("/public/videos/background.mp4") no-repeat center center/cover; /* Fallback image */
 }
 
 .project-cards {
+  position: relative; /* Ensures cards are above the video */
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   gap: 20px;
   align-items: center;
+  z-index: 1; /* Ensures cards are above the video */
 }
 
 .project-card {
@@ -174,6 +181,14 @@
 .project-card:hover {
   filter: grayscale(0);
   transform: scale(1.05);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .project-card {
+    width: 100%;
+    max-width: 90%;
+  }
 }
 
 /* Contact Styles */

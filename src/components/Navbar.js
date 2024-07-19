@@ -15,27 +15,36 @@ const Navbar = () => {
         <div className="nav-content">
           <ul>
             <li>
-              <a className="menu-item">
-                <Link to="home" smooth={true} duration={500}>
-                  Home
-                </Link>
-              </a>
+              <Link
+                to="home"
+                smooth={true}
+                duration={500}
+                className="menu-item"
+              >
+                Home
+              </Link>
             </li>
             <li>
-              <a className="menu-item">
-                <Link to="projects" smooth={true} duration={500}>
-                  Project
-                </Link>
-              </a>
+              <Link
+                to="projects"
+                smooth={true}
+                duration={500}
+                className="menu-item"
+              >
+                Project
+              </Link>
             </li>
 
             <li>
-              <a className="menu-item">
-                {" "}
-                <Link to="contact" smooth={true} duration={500}>
-                  Contact Me
-                </Link>
-              </a>
+              {" "}
+              <Link
+                to="contact"
+                smooth={true}
+                duration={500}
+                className="menu-item"
+              >
+                Contact Me
+              </Link>
             </li>
 
             <button className="contact-btn" onClick={() => {}}>
@@ -66,28 +75,37 @@ const MobileNav = ({ isOpen, toggleMenu }) => {
           <img className="logo" src="" alt="" />
           <ul>
             <li>
-              <a className="menu-item">
-                {" "}
-                <Link to="home" smooth={true} duration={500}>
-                  Home
-                </Link>
-              </a>
+              {" "}
+              <Link
+                to="home"
+                smooth={true}
+                duration={500}
+                className="menu-item"
+              >
+                Home
+              </Link>
             </li>
             <li>
-              <a className="menu-item">
-                <Link to="projects" smooth={true} duration={500}>
-                  Project
-                </Link>
-              </a>
+              <Link
+                to="projects"
+                smooth={true}
+                duration={500}
+                className="menu-item"
+              >
+                Project
+              </Link>
             </li>
 
             <li>
-              <a className="menu-item">
-                {" "}
-                <Link to="contact" smooth={true} duration={500}>
-                  Contact Me
-                </Link>
-              </a>
+              {" "}
+              <Link
+                to="contact"
+                smooth={true}
+                duration={500}
+                className="menu-item"
+              >
+                Contact Me
+              </Link>
             </li>
 
             <button className="contact-btn" onClick={() => {}}>

@@ -1,6 +1,6 @@
 .nav-wrapper {
-  background: rgba(156, 156, 156, 0.979);
-  background-image: url("/public/image/nav-img.jpg");
+  background: rgba(4, 2, 24, 0.979);
+  /* background-image: url("/public/image/nav-img.jpg"); */
   background-size: cover;
 
   background-position: inherit;
@@ -132,7 +132,7 @@
   width: 100vw;
   height: 100vh;
   display: none;
-  background-color: rgba(177, 187, 194, 0.3);
+  background-color: rgba(158, 158, 173, 0.3);
   position: fixed;
   left: 0;
   top: 0;
@@ -146,7 +146,7 @@
 .mobile-menu-container {
   width: 60vw;
   height: 100vh;
-  background-color: #8e948d;
+  background-color: #040427;
   padding: 2rem;
 }
 

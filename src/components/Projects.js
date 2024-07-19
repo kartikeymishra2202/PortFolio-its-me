@@ -39,9 +39,13 @@ const Projects = () => {
     color: "white",
     textShadow: "2px 2px 5px rgba(0, 0, 0, 0.3)",
   };
+  const ParaStyle = {
+    fontFamily: '"Comic Sans MS", cursive, sans-serif',
+    fontSize: "14px",
+    color: "black",
+  };
   return (
     <section className="projects">
-      
       <h2 style={headingStyle}>Projects</h2>
       <div className="project-cards">
         {projects.map((project) => (
@@ -49,7 +53,7 @@ const Projects = () => {
             <div>
               <img src={project.imageUrl} alt={project.title} />
               <h3>{project.title}</h3>
-              <p>{project.description}</p>
+              <p style={ParaStyle}>{project.description}</p>
             </div>
           </div>
         ))}

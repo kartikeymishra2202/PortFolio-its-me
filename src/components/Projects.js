@@ -41,15 +41,7 @@ const Projects = () => {
   };
   return (
     <section className="projects">
-      <div className="background-video-container">
-        <video autoPlay muted loop className="background-video">
-          <source
-            src={`${process.env.PUBLIC_URL}/videos/background.mp4`}
-            type="video/mp4"
-          />
-          Your browser does not support the video tag.
-        </video>
-      </div>
+      
       <h2 style={headingStyle}>Projects</h2>
       <div className="project-cards">
         {projects.map((project) => (

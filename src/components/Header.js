@@ -27,17 +27,11 @@ const Header = () => {
 
   return (
     <header className="header">
-     
       <div className="intro">
         <h1>Hi, I'm Kartikey</h1>
         <span className="moving-text" ref={typedElement}></span>
       </div>
-      <div className="photo">
-        <div>
-          {" "}
-          <img src={`${process.env.PUBLIC_URL}/image/me.jpg`} alt="Kartikey " />
-        </div>
-      </div>
+      <div className="photo"></div>
     </header>
   );
 };

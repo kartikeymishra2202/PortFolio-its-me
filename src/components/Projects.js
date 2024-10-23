@@ -4,9 +4,9 @@ import "../App.css";
 const projects = [
   {
     id: 1,
-    title: "Project User Authentication ",
+    title: "Project User Job Portal ",
     description:
-      "Full Stack Project in which user can login, register, updatepost, create comment, likes etc.",
+      "Full Stack Project in which user can login, register, update detail, create jobs, apply for jobs etc.",
     imageUrl: `${process.env.PUBLIC_URL}/image/project-1.png`,
   },
   {

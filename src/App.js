@@ -5,7 +5,7 @@ import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import "./App.css";
-import MatterCloth from "./components/MatterCloth";
+// import MatterCloth from "./components/MatterCloth";
 
 const App = () => {
   return (
@@ -18,7 +18,7 @@ const App = () => {
       <div id="projects">
         <Projects />
       </div>
-      <MatterCloth />
+      {/* <MatterCloth /> */}
       <div id="contact">
         <Contact />
       </div>
